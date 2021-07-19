@@ -36,3 +36,8 @@ a {
 .right {
     float: right;
 }
+
+img{
+    max-width: 100% !important;
+    height: auto !important;
+}

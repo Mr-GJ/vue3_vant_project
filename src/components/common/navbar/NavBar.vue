@@ -6,7 +6,7 @@
       </slot>
     </div>
     <div class="center">
-      <slot name="center">图书馆</slot>
+      <slot>图书馆</slot>
     </div>
     <div class="right">
       <slot name="right"></slot>
@@ -40,7 +40,7 @@ export default {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 9;
+  z-index: 10;
   height: 45px;
   line-height: 45px;
   text-align: center;

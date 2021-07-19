@@ -1,5 +1,12 @@
 <template>
-  <router-view/>
+  <router-view></router-view>
+<!--  <router-view v-slot="{Component}">-->
+<!--    <trasition>-->
+<!--      <keep-alive>-->
+<!--        <component :is="Component"></component>-->
+<!--      </keep-alive>-->
+<!--    </trasition>-->
+<!--  </router-view>-->
   <div id="nav">
     <router-link class="tab-bar-item" to="/home">
       <div class="icon"><i class="iconfont icon-shouye"></i></div>
@@ -10,7 +17,12 @@
       <div>分类</div>
     </router-link>
     <router-link class="tab-bar-item" to="/shopCar">
-      <div class="icon"><i class="iconfont icon-gouwuche"></i></div>
+      <div class="icon">
+        <van-badge :content="$store.state.shopcar_count" max="9">
+          <i class="iconfont icon-gouwuche"></i>
+        </van-badge>
+
+      </div>
       <div>购物车</div>
     </router-link>
     <router-link class="tab-bar-item" to="/profile">
@@ -35,11 +47,12 @@
 #nav {
   background: #F6F6F6;
   display: flex;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
-  box-shadow: 0 -2px 10px rgba(100,100,100,0.2);
+  bottom: 0px;
+  box-shadow: 0 -2px 10px rgba(100, 100, 100, 0.2);
+  z-index: 20;
   a {
     color: var(--color-text);
 
@@ -47,14 +60,16 @@
       color: #42b983;
     }
   }
-  .tab-bar-item{
-    flex:1;
+
+  .tab-bar-item {
+    flex: 1;
     text-align: center;
     height: 50px;
     margin-top: 3px;
     vertical-align: middle;
   }
-  .tab-bar-item .icon{
+
+  .tab-bar-item .icon {
     width: 24px;
     height: 24px;
     margin-top: 3px;

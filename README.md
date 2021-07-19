@@ -11,6 +11,7 @@ npm run serve
 ```
 
 ### Compiles and minifies for production
+##put the dist into your service and give it a response service like ewshop.com
 ```
 npm run build
 ```

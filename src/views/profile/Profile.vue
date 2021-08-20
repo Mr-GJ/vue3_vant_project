@@ -16,15 +16,15 @@
         </div>
       </div>
       <div class="user-list">
-        <li class="van-hairline--bottom" >
+        <li class="van-hairline--bottom" @click="goTo('/collect')">
           <span>我的收藏</span>
           <van-icon name="arrow"/>
         </li>
-        <li class="van-hairline--bottom" >
+        <li class="van-hairline--bottom" @click="goTo('/orderList')">
           <span>我的订单</span>
           <van-icon name="arrow"/>
         </li>
-        <li class="van-hairline--bottom" >
+        <li class="van-hairline--bottom" @click="goTo('/setting')">
           <span>账号管理</span>
           <van-icon name="arrow"/>
         </li>
@@ -32,7 +32,7 @@
           <span>地址管理</span>
           <van-icon name="arrow"/>
         </li>
-        <li class="van-hairline--bottom" >
+        <li class="van-hairline--bottom" @click="goTo('/about')">
           <span>关于我们</span>
           <van-icon name="arrow"/>
         </li>
@@ -78,8 +78,8 @@ export default {
         }
       })
     }
-    const goTo = (data)=>{
-      router.push({path:data})
+    const goTo = (path,query)=>{
+      router.push({path:path,query:query||{}})
     }
     /*
       onMounted

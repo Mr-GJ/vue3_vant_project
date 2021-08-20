@@ -21,7 +21,6 @@
         <van-badge :content="$store.state.shopcar_count" max="9">
           <i class="iconfont icon-gouwuche"></i>
         </van-badge>
-
       </div>
       <div>购物车</div>
     </router-link>

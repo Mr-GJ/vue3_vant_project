@@ -19,6 +19,7 @@ export default {
       }
     },
   },
+  //props , context
   setup(props,{emit}){
     let currentIndex = ref(0);
     const focuseOn = (index)=>{

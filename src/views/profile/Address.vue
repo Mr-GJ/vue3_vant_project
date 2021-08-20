@@ -13,6 +13,7 @@
             default-tag-text="默认"
             @add="onAdd"
             @edit="onEdit"
+            @change-detail="onChangeDetail"
         />
       </div>
 
@@ -45,9 +46,22 @@ export default {
       Toast("添加地址")
       router.push({path:'/addressNew'})
     }
-    const onEdit = ()=>{
+    const onEdit = (item)=>{
       Toast("编辑地址")
-      router.push({path:'/addressEdit'})
+      router.push({path:'/addressEdit',query: {id:item.id}})
+    }
+    //详细地址的提示作用
+    const onChangeDetail = (val)=> {
+      if (val) {
+        this.searchResult = [
+          {
+            name: '黄龙万科中心',
+            address: '杭州市西湖区',
+          },
+        ];
+      } else {
+        this.searchResult = [];
+      }
     }
     /*
       onMounted
@@ -73,8 +87,8 @@ export default {
       chosenAddressId,
       ...toRefs(address_list),
       onAdd,
-      onEdit
-
+      onEdit,
+      onChangeDetail
     }
   }
 }

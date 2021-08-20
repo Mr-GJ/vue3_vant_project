@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import 'vant/lib/index.css';
-import {AddressEdit ,AddressList ,Icon,SubmitBar,Stepper,Step, Steps,SwipeCell ,Checkbox, CheckboxGroup,Field ,Form,Tag,Button,Image as VanImage,ImagePreview ,Card ,Swipe, SwipeItem, Lazyload, Badge, Sidebar, SidebarItem, Collapse, CollapseItem, Tab, Tabs} from 'vant';
+import { Divider ,PullRefresh,List ,Grid, GridItem,Popup,ContactCard ,AddressEdit ,AddressList ,Icon,SubmitBar,Stepper,Step, Steps,SwipeCell ,Checkbox, CheckboxGroup,Field ,Form,Tag,Button,Image as VanImage,ImagePreview ,Card ,Swipe, SwipeItem, Lazyload, Badge, Sidebar, SidebarItem, Collapse, CollapseItem, Tab, Tabs} from 'vant';
 
 createApp(App)
     .use(Swipe).use(SwipeItem).use(Lazyload, {
@@ -12,5 +12,6 @@ createApp(App)
     .use(Tab).use(Tabs).use(Card).use(ImagePreview).use(VanImage).use(Tag)
     .use(Button).use(Form).use(Field).use(Checkbox).use(CheckboxGroup)
     .use(SwipeCell).use(Step).use(Steps).use(Stepper).use(SubmitBar).use(Icon)
-    .use(AddressList).use(AddressEdit)
+    .use(AddressList).use(AddressEdit).use(ContactCard).use(Popup).use(Grid).use(GridItem)
+    .use(List).use(PullRefresh).use(Divider )
     .use(store).use(router).mount('#app')

@@ -3,6 +3,9 @@ import store from "../store";
 import {Notify} from "vant";
 
 import Login from "@/views/profile/Login";
+import OrderPreview from "@/views/order/OrderPreview";
+import OrderDetail from "@/views/order/OrderDetail";
+import OrderList from "@/views/order/OrderList";
 const Home = () => import('../views/home/Home');
 const Category = () => import('../views/category/Category');
 const Detail = () => import('../views/detail/Detail');
@@ -106,7 +109,34 @@ const routes = [
             title:'图书商城-新增地址',
             isAuth:true
         }
-    }
+    },
+    {
+        path: '/orderPreview',
+        name: 'OrderPreview',
+        component: OrderPreview,
+        meta:{
+            title:'图书商城-订单预览',
+            isAuth:true
+        }
+    },
+    {
+        path: '/orderDetail',
+        name: 'OrderDetail',
+        component: OrderDetail,
+        meta:{
+            title:'图书商城-订单详情',
+            isAuth:true
+        }
+    },
+    {
+        path: '/orderList',
+        name: 'OrderList',
+        component: OrderList,
+        meta:{
+            title:'图书商城-我的订单',
+            isAuth:true
+        }
+    },
 
 ]
 

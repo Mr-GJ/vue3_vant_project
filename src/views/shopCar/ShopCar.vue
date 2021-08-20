@@ -141,10 +141,8 @@ export default {
         Toast.fail("请选择商品进行结算")
         return;
       }else{
-        router.push({path:'/createOrder'})
+        router.push({path:'/OrderPreview'})
       }
-
-
     }
     /*
       onMounted
